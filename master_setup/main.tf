@@ -24,7 +24,7 @@ data "aws_ami" "amazon-2" {
     name = "name"
     values = ["amzn2-ami-hvm-*-x86_64-ebs"]
   }
-#  owners = ["099720109477"]
+  #  owners = ["099720109477"]
   owners = ["amazon"]
 }
 
@@ -34,26 +34,26 @@ resource "aws_instance" "master" {
   ami = data.aws_ami.amazon-2.id
   count                  = var.settings.web_app.count
   instance_type          = var.settings.web_app.instance_type
-  subnet_id              = aws_subnet.tutorial_public_subnet[count.index].id
-  key_name               = aws_key_pair.tutorial_kp.key_name
-  vpc_security_group_ids = [aws_security_group.tutorial_web_sg.id]
+  subnet_id              = aws_subnet.master_public_subnet[count.index].id
+  key_name               = aws_key_pair.master_kp.key_name
+  vpc_security_group_ids = [aws_security_group.master_web_sg.id]
 
   tags = {
-    Name = "tutorial_web_${count.index}"
+    Name = "master"
   }
 
-  }
-resource "aws_key_pair" "tutorial_kp" {
-    key_name   = "tutorial_kp"
-    public_key = file("tutorial_kp.pub")
-  }
+}
+resource "aws_key_pair" "master_kp" {
+  key_name   = "master_kp"
+  public_key = "${file("~/.ssh/master_kp.pub")}"
+}
 
-resource "aws_eip" "tutorial_web_eip" {
+resource "aws_eip" "master_web_eip" {
   count    = var.settings.web_app.count
   instance = aws_instance.master[count.index].id
   vpc      = true
 
   tags = {
-    Name = "tutorial_web_eip_${count.index}"
+    Name = "master${count.index}"
   }
 }
