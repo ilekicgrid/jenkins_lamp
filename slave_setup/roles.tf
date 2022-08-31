@@ -45,7 +45,7 @@ resource "aws_iam_policy" "ECRPuller" {
                 "ecr:BatchGetImage",
                 "ecr:GetDownloadUrlForLayer"
             ],
-            "Resource": "837222496434.dkr.ecr.eu-central-1.amazonaws.com/jenkins_repo"
+            "Resource": "arn:aws:ecr:eu-central-1:837222496434:repository/jenkins_repo"
         },
         {
             "Effect": "Allow",
@@ -55,7 +55,7 @@ resource "aws_iam_policy" "ECRPuller" {
         {
             "Effect": "Allow",
             "Action": "ecr:BatchCheckLayerAvailability",
-            "Resource": "837222496434.dkr.ecr.eu-central-1.amazonaws.com/jenkins_repo"
+            "Resource": "arn:aws:ecr:eu-central-1:837222496434:repository/jenkins_repo"
         }
     ]
 }

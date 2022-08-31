@@ -3,6 +3,7 @@ variable "aws_region" {
   default = "eu-central-1"
 }
 
+
 variable "vpc_cidr_block" {
   description = "CIDR block for VPC"
   type        = string
@@ -23,11 +24,11 @@ variable "settings" {
   type        = map(any)
   default = {
     "database" = {
-      allocated_storage   = 10            // storage in gigabytes
-      engine              = "mysql"       // engine type
-      engine_version      = "8.0.27"      // engine version
-      instance_class      = "db.t2.micro" // rds instance type
-      db_name             = "tutorial"    // database name
+      allocated_storage   = 10
+      engine              = "mysql"
+      engine_version      = "8.0.27"
+      instance_class      = "db.t2.micro"
+      db_name             = "jenkins"
       skip_final_snapshot = true
     },
     "web_app" = {
