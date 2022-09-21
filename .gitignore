@@ -10,7 +10,7 @@
 *.tfstate.*
 
 
-.idea
+.idea/
 
 # Crash log files
 crash.log
