@@ -13,4 +13,4 @@ When you check out all of the repos there are the following command to start eve
 2) This repo       ---------------_>     ``` terrafrom init, terraform apply ```
 
 
-![Terraform and aws](https://github.com/ilekicgrid/jenkins_lamp/images/tf-aws.png)
+![Terraform and aws](https://github.com/ilekicgrid/jenkins_lamp.git/images/tf-aws.png)
