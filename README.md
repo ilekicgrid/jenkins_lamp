@@ -14,5 +14,5 @@ When you check out all of the repos there are the following command to start eve
 
 
 ![Terraform and aws](https://github.com/ilekicgrid/jenkins_lamp/images/tf-aws.png)
-![Ansible](https://github.com/ilekicgrid/jenkins_lamp/images/ansible.png)
-![Jenkins](https://github.com/ilekicgrid/jenkins_lamp/images/jenkins.png)
+![Ansible](/jenkins_lamp/images/ansible.png)
+![Jenkins](/jenkins_lamp/images/jenkins.png)
