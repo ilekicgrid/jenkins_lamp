@@ -11,3 +11,6 @@ This repo is connected to the cloud and you should check out these repos:
 When you check out all of the repos there are the following command to start everything:
 1) https://github.com/ilekicgrid/Ansible-for-jenkins       ----------_> ``` ansible-playbook sites.yml -i hosts.yml ```
 2) This repo       ---------------_>     ``` terrafrom init, terraform apply ```
+
+
+![Terraform and aws](https://github.com/ilekicgrid/jenkins_lamp/images/tf-aws.png)
